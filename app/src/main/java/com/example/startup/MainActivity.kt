@@ -3,6 +3,7 @@ package com.example.startup
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,8 +13,8 @@ class MainActivity : AppCompatActivity() {
 
         buFindAge.setOnClickListener {
             val yearOfBirth:Int = txtYearOfBirth.text.toString().toInt()
-            val myAge = 2020 - yearOfBirth
-//            tvShowAge.text = myAge.toString()
+            val currentYear = Calendar.getInstance().get(Calendar.YEAR)
+            val myAge = currentYear - yearOfBirth
             tvShowAge.text = "Your age is $myAge years"
 
         }
