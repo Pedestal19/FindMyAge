@@ -32,11 +32,12 @@
         app:layout_constraintTop_toBottomOf="@+id/txtYearOfBirth" />
 
     <Button
-        android:background="@color/colorAccent"
         android:id="@+id/buFindAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
+        android:background="@color/colorAccent"
+        android:onClick="buFindAgeEvent"
         android:text="Get My Age"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.947"
