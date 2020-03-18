@@ -10,6 +10,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        tvDisplay.text="Welcome to Kotlin"
+        buFindAge.setOnClickListener {
+            val yearOfBirth:Int = txtYearOfBirth.text.toString().toInt()
+            val myAge = 2020 - yearOfBirth
+//            tvShowAge.text = myAge.toString()
+            tvShowAge.text = "Your age is $myAge years"
+
+        }
+
     }
 }
