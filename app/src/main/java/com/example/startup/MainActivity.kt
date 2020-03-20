@@ -21,6 +21,10 @@ class MainActivity : AppCompatActivity() {
 
     fun buFindAgeEvent(view: View){
         val yearOfBirth:Int = txtYearOfBirth.text.toString().toInt()
+        if(yearOfBirth==0){
+            tvShowAge.text="Invalid input"
+            return
+        }
         val currentYear = Calendar.getInstance().get(Calendar.YEAR)
         val myAge = currentYear - yearOfBirth
         tvShowAge.text = "Your age is $myAge years"
